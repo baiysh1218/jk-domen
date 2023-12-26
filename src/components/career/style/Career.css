@@ -1,0 +1,623 @@
+.career_main_wrapper {
+  width: 100%;
+  height: auto;
+  margin: 0px auto 0px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.media_content {
+  height: 600px;
+  /* margin-bottom: 50px; */
+  overflow: hidden;
+  width: 106vw;
+}
+#career-video {
+  width: 100%;
+  height: 148%;
+  background-size: cover;
+  /* filter: brightness(25%); */
+  /* margin-bottom: 100px; */
+  background-position: center;
+  margin-top: -200px;
+}
+.career_img {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.career_img img {
+  width: 100%;
+  position: absolute;
+  filter: brightness(70%);
+  z-index: 0;
+}
+.career_img * {
+  z-index: 5;
+  color: white;
+}
+.card_animation_content p * {
+  text-align: left;
+}
+.career_img h4 {
+  position: relative;
+  z-index: 1;
+  left: 50px;
+  top: 50px;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.career_img input {
+  position: absolute;
+  right: 0;
+}
+.career_img p {
+  position: inherit;
+  z-index: 1;
+  top: 50px;
+  left: 25px;
+  width: 200px;
+  text-align: start;
+}
+
+.career_img button {
+  position: relative;
+  z-index: 1;
+
+  top: 70px;
+  right: -1050px;
+  background-color: transparent;
+  border: none;
+  font-size: 23px;
+  padding: 10px;
+  transition: 0.3s;
+}
+.career_img button:hover {
+  filter: brightness(80%);
+  transition: 0.3s;
+}
+.media_content img {
+  background-size: contain;
+  background-position: start, center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.company_main_card {
+  position: relative;
+  left: 0px;
+  width: 100% !important;
+  height: 100%;
+}
+.company_card_wrapper {
+  width: 55%;
+}
+
+.card_animation {
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  width: 350px;
+  height: 410px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.card_animation img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 110%;
+  background: #eee;
+}
+
+.card_animation .isLoaded {
+  width: 200%;
+  height: 100%;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  /* animation: shine 1.5s linear infinite; */
+}
+
+/* @keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+} */
+
+.card_animation.animate {
+  opacity: 1;
+}
+
+.container_card_animation {
+  width: 90%;
+  margin: 5% auto 10%;
+  height: auto;
+}
+
+.card_animation_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_content_wrapper {
+  height: 700px;
+  width: 42%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: -85px;
+}
+
+@keyframes card1 {
+  from {
+    left: 500px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes card2 {
+  from {
+    left: 500px;
+  }
+  to {
+    left: 115px;
+  }
+}
+@keyframes card3 {
+  from {
+    left: 500px;
+  }
+  to {
+    left: 230px;
+  }
+}
+
+.company_main_card .card_animation {
+  opacity: 0;
+}
+
+.company_main_card .card_animation.animate {
+  opacity: 1;
+  transition: opacity 0.3 linear;
+}
+
+.company_main_card .card_animation.animate:nth-child(1) {
+  left: 0px;
+  opacity: 1;
+  transition: opacity 0.3 linear;
+  animation: card1 0.3s linear;
+}
+
+.company_main_card .card_animation.animate:nth-child(2) {
+  left: 115px;
+  opacity: 1;
+  transition: opacity 0.3 linear;
+  animation: card2 0.3s linear;
+}
+.company_main_card .card_animation.animate:nth-child(3) {
+  left: 230px;
+  opacity: 1;
+  transition: opacity 0.3 linear;
+  animation: card2 0.3s linear;
+}
+
+.company_main_card .card_animation:nth-child(1) {
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.3 linear;
+}
+
+.company_main_card .card_animation:nth-child(2) {
+  left: 115px;
+  top: 90px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3 linear;
+}
+
+.company_main_card .card_animation:nth-child(3) {
+  left: 230px;
+  top: 180px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3 linear;
+}
+
+.company_main_card .card_animation:nth-child(4) {
+  left: 345px;
+  top: 270px;
+  z-index: 3;
+}
+
+.company_main_card .card_animation:nth-child(5) {
+  left: 445px;
+  top: 360px;
+  z-index: 4;
+}
+
+.company_content_text_wrapper h2 {
+  font-size: 32px;
+  text-align: left;
+}
+
+.card_animation_content {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  text-align: center;
+}
+
+.card_animation_content h2 {
+  margin-bottom: 5%;
+}
+
+.custom-file-input {
+  display: none;
+}
+.custom-file-input-label {
+  position: absolute;
+  right: 35px;
+  top: 87%;
+}
+.c-tabs-nav__link {
+  margin-bottom: 10px;
+}
+.c-tb-nav-career {
+  height: 491px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 55% !important;
+}
+.c-tab-career {
+  display: flex;
+  height: 540px;
+}
+
+.career_first_block {
+  width: 85%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.career_first_block_headers h2 {
+  font-size: 32px;
+}
+
+.career_first_block_content {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.career_first_block_content h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.career_first_block_content p * {
+  font-size: 18px !important;
+}
+
+.career_first_block_content p {
+  font-size: 18px !important;
+}
+
+.career_content_block {
+  margin-bottom: 100px;
+}
+
+.career_img_block_wrapper {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.career_img_block_wrapper img {
+  width: 80%;
+  margin: auto;
+  margin-left: 0;
+}
+
+.career_img_block_content {
+  background-color: #f1f1f1;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: -300px;
+  padding: 50px;
+  gap: 50px;
+}
+
+.career_img_block_content h3 {
+  font-size: 26px;
+}
+
+.career_img_block_content p {
+  font-size: 18px;
+}
+
+.principles_wrapper {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.principles_main_info__block {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.principles_main_info__block h3 {
+  font-size: 32px;
+}
+
+.principles_main_info__block p {
+  font-size: 18px;
+}
+
+.principles_item_wrapper {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+
+.principles_item_wrapper li {
+  font-size: 18px;
+  /* border-bottom: 1px solid black; */
+  padding-bottom: 15px;
+  margin-top: 15px;
+  position: relative;
+  left: 2em;
+}
+
+.principles_item_wrapper li::before {
+  content: "";
+  position: absolute;
+  left: -2em;
+  width: 22px;
+  height: 22px;
+  background-image: url("../../../assets/icons/global/checkMark.png");
+  background-size: cover;
+}
+
+.input-type-file {
+  background-color: #294c63;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  /* border-radius: 5px; */
+}
+
+.input-type-file:hover {
+  background-color: #213d4f;
+}
+
+.iksweb {
+  width: 90%;
+  margin: auto;
+  margin-right: 0;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+.iksweb thead td {
+  font-size: 23px;
+  font-weight: 700;
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+
+.iksweb tbody tr {
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 3px solid #294c63;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.tr_table.open {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.iksweb tbody tr:hover {
+  background-color: #e0dfdf;
+}
+
+.iksweb tbody tr td {
+  cursor: pointer;
+  padding-left: 20px;
+}
+.iksweb tbody tr td:first-child {
+  width: 40%;
+}
+.iksweb tbody tr td:nth-child(2) {
+  width: 25%;
+}
+
+.iksweb tbody tr td:last-child {
+  width: 10%;
+}
+
+.iksweb tbody tr td svg {
+  width: 50px;
+  height: 50px;
+  background-color: #294c63;
+  border-radius: 50px;
+  padding: 10px;
+  fill: white;
+  cursor: pointer;
+
+  transform: rotate(90deg);
+  transition: height 0.3s ease-in-out;
+}
+
+.iksweb tbody tr td svg:hover {
+  background-color: #213d4f;
+}
+
+.accardion_icon.active {
+  transform: rotate(-90deg);
+}
+
+.accardion_tab {
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 15px;
+
+  padding-left: 20px;
+
+  /* margin-top: 15px; */
+}
+
+.accardion_tab h4 {
+  text-align: left;
+  font-size: 23px;
+}
+.accardion_tab p {
+  font-size: 18px;
+}
+.accardion_tab .accardioin_item_p {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.accardion_tab.open {
+  height: auto;
+  max-height: 400px; /* Задайте значение, которое больше, чем ожидаемая максимальная высота */
+  margin: 20px 0;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  border: none;
+  /* border-radius: 5px; */
+  width: 70px;
+  height: 40px;
+  background-color: #294c63;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #213d4f;
+}
+
+.career_img_wrapper {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  /* margin-right: 0; */
+  margin-bottom: -250px;
+}
+.vacancies_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vacancies_wrapper h3 {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  font-size: 32px;
+}
+
+.career_img_wrapper .img_item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.career_img_wrapper .img_item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.career_img_wrapper .img_item .img_wrapper {
+  width: 55%;
+  height: 450px;
+  overflow: hidden;
+  background-position: center;
+}
+
+.career_img_wrapper .img_item .img_wrapper img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  /* height: 380px; */
+}
+
+.img_item_content_block {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.img_item_content_block h3 {
+  font-size: 23px;
+}
+
+.img_item_content_block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.img_item_content_block ul li {
+  font-size: 18px;
+  position: relative;
+  left: 2em;
+}
+
+.img_item_content_block ul li::before {
+  content: "";
+  position: absolute;
+  left: -2em;
+  width: 22px;
+  height: 22px;
+  background-image: url("../../../assets/icons/global/checkMark.png");
+  background-size: cover;
+}
