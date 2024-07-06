@@ -101,7 +101,7 @@ function reducer(state = INIT_STATE, action) {
   }
 }
 
-const API = "https://jk-group-production.up.railway.app";
+const API = "https://backend.jkgroup.kg/";
 
 const PageContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -132,7 +132,7 @@ const PageContextProvider = ({ children }) => {
       });
 
       let allMissions = [];
-      result.data.results.forEach(result => {
+      result.data.results.forEach((result) => {
         if (result.mission && result.mission.length > 0) {
           allMissions = [...allMissions, ...result.mission];
         }
@@ -167,8 +167,8 @@ const PageContextProvider = ({ children }) => {
     navigate(`/team/structure/${item[`title_${state.language}`]}`);
   }
 
-  const handleFiltered = clickedItem => {
-    const filteredLines = state.line.filter(item => {
+  const handleFiltered = (clickedItem) => {
+    const filteredLines = state.line.filter((item) => {
       return item[`title_${state.language}`] == clickedItem.item;
     });
     dispatch({ type: "GET_CURRENT_COMPANY", payload: filteredLines });
@@ -206,7 +206,9 @@ const PageContextProvider = ({ children }) => {
       dispatch({ type: "POSTS_ALL", payload: result.data });
 
       const uniqueData = result.data.data.filter((item, index, arr) => {
-        const firstIndex = arr.findIndex(obj => obj.category === item.category);
+        const firstIndex = arr.findIndex(
+          (obj) => obj.category === item.category
+        );
         return firstIndex === index;
       });
 
@@ -282,7 +284,7 @@ const PageContextProvider = ({ children }) => {
     }
   }
 
-  const handleSubmitForm = async submitData => {
+  const handleSubmitForm = async (submitData) => {
     try {
       await axios.post(
         `${API}/${state.language}/contacts/send-mail/`,
